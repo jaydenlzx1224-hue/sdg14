@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Learn about ocean pollution, its effects on marine life, and ways to protect our oceans.">
+<title>Protect Our Oceans | SDG 14</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>🌊 SDG 14: Life Below Water</h1>
+  <p>Protect Marine Life, Protect Our Future</p>
+</header>
+<nav aria-label="Main navigation">
+  <a href="#home">Home</a><a href="#about">About SDG 14</a>
+  <a href="#pollution">Pollution</a><a href="#solutions">Solutions</a><a href="#quiz">Quiz</a>
+</nav>
+
+<div class="hero" id="home">
+  <div class="hero-content">
+    <h2>Protect Our Oceans, Protect Our Future</h2>
+    <p>Healthy oceans support life on Earth. Explore the problems affecting our seas and discover how everyone can help.</p>
+    <a class="btn" href="#about">Explore More</a>
+  </div>
+</div>
+
+<main>
+<section id="about">
+  <h2>🌍 What Is SDG 14?</h2>
+  <div class="intro">
+    <p><strong>SDG 14: Life Below Water</strong> is one of the United Nations' 17 Sustainable Development Goals. It aims to conserve and sustainably use oceans, seas and marine resources.</p>
+    <p>Oceans provide food, support biodiversity, create jobs and help regulate Earth's climate. Protecting them is important for people, animals and future generations.</p>
+  </div>
+</section>
+
+<section id="pollution">
+  <h2>🐢 Causes and Effects of Ocean Pollution</h2>
+  <p class="section-intro">Tap any topic below to open a new information screen with a real-life photograph and a fuller explanation.</p>
+  <div class="cards">
+    <button class="card card-button" onclick="openDetail('plastic')">
+      <div class="emoji">🧴</div><h3>Plastic Waste</h3>
+      <p>Plastic bags, bottles and packaging can enter the sea and harm marine animals.</p>
+      <span class="learn">Read more →</span>
+    </button>
+    <button class="card card-button" onclick="openDetail('chemicals')">
+      <div class="emoji">🏭</div><h3>Chemical and Wastewater Pollution</h3>
+      <p>Polluted water from homes, farms and factories can damage ocean habitats.</p>
+      <span class="learn">Read more →</span>
+    </button>
+    <button class="card card-button" onclick="openDetail('fishing')">
+      <div class="emoji">🎣</div><h3>Lost Fishing Gear</h3>
+      <p>Abandoned nets and fishing lines can trap marine animals.</p>
+      <span class="learn">Read more →</span>
+    </button>
+    <button class="card card-button" onclick="openDetail('oil')">
+      <div class="emoji">🛢️</div><h3>Oil Pollution</h3>
+      <p>Oil spills can coat animals and affect the places where they live.</p>
+      <span class="learn">Read more →</span>
+    </button>
+  </div>
+</section>
+
+<section id="solutions">
+  <h2>♻️ How Can We Protect Our Oceans?</h2>
+  <p class="section-intro">There are many ways to help. Tap each action to learn why it matters and how you can practise it.</p>
+  <div class="cards">
+    <button class="card card-button" onclick="openDetail('reusables')">
+      <div class="emoji">🥤</div><h3>Use Reusable Items</h3>
+      <p>Choose reusable bags, bottles and food containers instead of single-use plastic.</p>
+      <span class="learn">How does this help? →</span>
+    </button>
+    <button class="card card-button" onclick="openDetail('recycle')">
+      <div class="emoji">♻️</div><h3>Reduce and Recycle Waste</h3>
+      <p>Use less packaging, sort recyclable materials and dispose of rubbish properly.</p>
+      <span class="learn">How does this help? →</span>
+    </button>
+    <button class="card card-button" onclick="openDetail('cleanup')">
+      <div class="emoji">🏖️</div><h3>Join Clean-up Activities</h3>
+      <p>Take part in organised beach or river clean-ups with responsible supervision.</p>
+      <span class="learn">How does this help? →</span>
+    </button>
+    <button class="card card-button" onclick="openDetail('seafood')">
+      <div class="emoji">🐟</div><h3>Choose Sustainable Seafood</h3>
+      <p>When possible, choose seafood from responsible sources that protect fish populations.</p>
+      <span class="learn">How does this help? →</span>
+    </button>
+    <button class="card card-button" onclick="openDetail('awareness')">
+      <div class="emoji">📢</div><h3>Spread Awareness</h3>
+      <p>Share reliable information and encourage friends and family to care for the ocean.</p>
+      <span class="learn">How does this help? →</span>
+    </button>
+    <button class="card card-button" onclick="openDetail('water')">
+      <div class="emoji">🚰</div><h3>Keep Drains and Rivers Clean</h3>
+      <p>Never pour rubbish, oil or harmful chemicals into drains, streams or rivers.</p>
+      <span class="learn">How does this help? →</span>
+    </button>
+  </div>
+</section>
+
+<section id="quiz">
+  <h2>🧠 Test Your Knowledge!</h2>
+  <div class="quiz">
+    <p>Which action helps protect ocean life?</p>
+    <button class="btn" onclick="checkAnswer('A')">A. Throw rubbish into rivers</button>
+    <button class="btn" onclick="checkAnswer('B')">B. Use reusable bottles</button>
+    <button class="btn" onclick="checkAnswer('C')">C. Leave plastic on the beach</button>
+    <div id="result" role="status" aria-live="polite"></div>
+  </div>
+</section>
+
+<section>
+  <div class="intro">
+    <h2>💙 Every Action Matters</h2>
+    <p>We all share one planet. Small daily actions can help create cleaner oceans and a safer future for marine animals.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p><strong>Protect Our Oceans, Protect Our Future</strong></p>
+  <p>School project about United Nations Sustainable Development Goal 14.</p>
+  <p>Learn more: <a href="https://sdgs.un.org/goals/goal14" target="_blank" rel="noopener">United Nations SDG 14</a></p>
+</footer>
+
+<!-- The detail screen changes content when a card is selected -->
+<div class="detail-screen" id="detailScreen" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+  <div class="detail-top">
+    <button class="back-btn" onclick="closeDetail()">← Back</button>
+    <strong>SDG 14 • Learn More</strong>
+  </div>
+  <article class="detail-content">
+    <h2 id="detailTitle"></h2>
+    <img id="detailImage" src="" alt="">
+    <p class="caption" id="detailCaption">Photograph for educational illustration.</p>
+    <div id="detailText"></div>
+    <div class="detail-tip" id="detailTip"></div>
+  </article>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
